@@ -1,9 +1,6 @@
-﻿using System;
-
-char[,] matriz = new char[3, 3];
+﻿char[,] matriz = new char[3, 3];
 char numeroDigitado = ' ';
 int jogada = 0;
-
 Tabuleiro();
 Jogo();
 void Jogo()
@@ -13,19 +10,27 @@ void Jogo()
     do
     {
         MostrarTabuleiro();
-        EscolhePosicao();
+        EscolherPosicao();
         vitoria = PreencherMatriz();
         Console.Clear();
 
     } while (jogada < 9 && !vitoria);
 
+    if (jogada == 9)
+    {
+        MostrarTabuleiro();
+        Console.WriteLine("Deu Velha...Tente Novamente!");
+    }
 
-    MostrarTabuleiro();
-    Console.WriteLine("Vitória!!!!");
-    Console.WriteLine("Fim de jogo. Parabéns!!!!!");
+    if (vitoria == true)
+    {
+        MostrarTabuleiro();
+        Console.WriteLine("Vitória!!!!");
+        Console.WriteLine("Fim de jogo. Parabéns!!!!!");
+
+    }
+  
 }
-
-
 bool PreencherMatriz()
 {
     bool ganhar = false;
@@ -35,7 +40,7 @@ bool PreencherMatriz()
             if (matriz[0, 0] == 'X' || matriz[0, 0] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -55,7 +60,7 @@ bool PreencherMatriz()
             if (matriz[0, 1] == 'X' || matriz[0, 1] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -75,7 +80,7 @@ bool PreencherMatriz()
             if (matriz[0, 2] == 'X' || matriz[0, 2] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -95,7 +100,7 @@ bool PreencherMatriz()
             if (matriz[1, 0] == 'X' || matriz[1, 0] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -115,7 +120,7 @@ bool PreencherMatriz()
             if (matriz[1, 1] == 'X' || matriz[1, 1] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -135,7 +140,7 @@ bool PreencherMatriz()
             if (matriz[1, 2] == 'X' || matriz[1, 2] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -155,7 +160,7 @@ bool PreencherMatriz()
             if (matriz[2, 0] == 'X' || matriz[2, 0] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -175,7 +180,7 @@ bool PreencherMatriz()
             if (matriz[2, 1] == 'X' || matriz[2, 1] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -195,7 +200,7 @@ bool PreencherMatriz()
             if (matriz[2, 2] == 'X' || matriz[2, 2] == 'O')
             {
                 Console.Write("Opção ocupada, tente outra posição.");
-                EscolhePosicao();
+                EscolherPosicao();
             }
             else if (jogada % 2 == 0)
             {
@@ -213,7 +218,7 @@ bool PreencherMatriz()
             break;
         default:
             Console.WriteLine("Digito incorreto.Tente novamnete.");
-            EscolhePosicao();
+            EscolherPosicao();
             break;
     }
 
@@ -245,7 +250,7 @@ void MostrarTabuleiro()
     }
 
 }
-void EscolhePosicao()
+void EscolherPosicao()
 {
     if (jogada % 2 == 0)
     {
