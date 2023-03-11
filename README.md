@@ -1,4 +1,6 @@
-# programa-jogo-da-velha #️⃣👵
+# Programa-Jogo-da-Velha #️⃣👵
+
+ Esse programa foi desenvolvido para produzir o famoso e clássico jogo da velha.
 
  O jogo da velha é um dos passatempos mais conhecidos e divertidos que se tem lembrança. Além de ser simples e rápido, este jogo ajuda a melhorar muito a sua capacidade lógica. Mas se engana quem pensa que a origem do jogo é recente.
 
