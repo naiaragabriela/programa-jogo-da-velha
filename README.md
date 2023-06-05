@@ -31,3 +31,6 @@ Este jogo além de ser muito divertido e dinâmico, desenvolve algumas competên
 ✔️ Interação e competitividade saudável;
 
 ✔️ Bem estar psicológico geral.
+
+# Estrelinha! ⭐
+Se você gostou do projeto deixe uma estelinha 👍
